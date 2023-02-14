@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace LineComparisonProgram
 {
-    //Created class ComparisonBetweenLine
+    //Created class ComparisonBetweenLine and also use as Base class
     public class ComparisonBetweenLine
     {
         //Created method CompareOfLine
-        public static void CompareOfLine(double X7, double X8, double Y7, double Y8, double X9, double X10, double Y9, double Y10)
+        public void CompareOfLine(double X7, double X8, double Y7, double Y8, double X9, double X10, double Y9, double Y10)
         {
             double temp1 = Math.Pow((X8 - X7), 2);
             double temp2 = Math.Pow((Y8 - Y7), 2);
@@ -33,6 +33,14 @@ namespace LineComparisonProgram
             {
                 Console.WriteLine("Length of line1 is smaller than length of line2");
             }
+        }
+    }
+    //Createed derived class and inherite from base class
+    public class LineComaparison : ComparisonBetweenLine
+    {
+        public void ComaparisonOfLine()
+        {
+            Console.WriteLine("The comaprison between two lines is:");
         }
     }
 }

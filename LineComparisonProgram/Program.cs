@@ -7,7 +7,7 @@
             Console.WriteLine("Welcome to Line Comparison Program");
             //Taking user inputs
             Console.WriteLine("Please enter option given below");
-            Console.WriteLine("1:Distance between line UC1\n2:Line equality check\n3:Comparison between line");
+            Console.WriteLine("1:Distance between line UC1\n2:Line equality check\n3:Comparison between line\n4:Refactor Line Comaparison");
             int option = Convert.ToInt32(Console.ReadLine());
             //Uses switch case to call different method
             switch (option)
@@ -60,7 +60,27 @@
                     Console.WriteLine("Please enter X10 and Y10 coordinates");
                     var X10 = Convert.ToDouble(Console.ReadLine());
                     var Y10 = Convert.ToDouble(Console.ReadLine());
-                    ComparisonBetweenLine.CompareOfLine(X7, Y7, X8, Y8, X9, Y9, X10, Y10);
+                    ComparisonBetweenLine comparisonBetweenLine = new ComparisonBetweenLine();
+                    comparisonBetweenLine.CompareOfLine(X7, Y7, X8, Y8, X9, Y9, X10, Y10);
+                    break;
+                case 4:
+                    {
+                        Console.WriteLine("Please enter X11 and Y11 coordinates");
+                        var X11 = Convert.ToDouble(Console.ReadLine());
+                        var Y11 = Convert.ToDouble(Console.ReadLine());
+                        Console.WriteLine("Please enter X12 and Y12 coordinates");
+                        var X12 = Convert.ToDouble(Console.ReadLine());
+                        var Y12 = Convert.ToDouble(Console.ReadLine());
+                        Console.WriteLine("Please enter X13 and Y13 coordinates");
+                        var X13 = Convert.ToDouble(Console.ReadLine());
+                        var Y13 = Convert.ToDouble(Console.ReadLine());
+                        Console.WriteLine("Please enter X14 and Y14 coordinates");
+                        var X14 = Convert.ToDouble(Console.ReadLine());
+                        var Y14 = Convert.ToDouble(Console.ReadLine());
+                        LineComaparison lineComaparison = new LineComaparison();
+                        lineComaparison.ComaparisonOfLine();
+                        lineComaparison.CompareOfLine(X11,Y11,X12,Y12,X13,Y13,X14,Y14);
+                    }
                     break;
                 default:
                     Console.WriteLine("Please enter right option");
